@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Find internships across technology, design, marketing, finance and other domains."
+    >
+
+    <title>InternHub - Internship Board</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="#" class="logo" aria-label="InternHub home">
+                Intern<span>Hub</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#internships">Internships</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+                    <p class="eyebrow">CAREER OPPORTUNITIES</p>
+
+                    <h1 id="hero-title">
+                        Find your next
+                        <span>internship.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Discover internships from technology, design, marketing,
+                        finance and other exciting domains.
+                    </p>
+
+                    <a href="#internships" class="primary-button">
+                        Explore Internships
+                    </a>
+                </div>
+
+                <div class="hero-card" aria-hidden="true">
+                    <div class="hero-icon">💼</div>
+                    <strong>Start your career</strong>
+                    <span>Learn. Build. Grow.</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Internship Section -->
+        <section id="internships" class="internship-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">OPPORTUNITIES</p>
+                        <h2>Latest Internships</h2>
+                    </div>
+
+                    <p id="resultCount" class="result-count" aria-live="polite">
+                        Loading internships...
+                    </p>
+                </div>
+
+
+                <!-- Search and Filter -->
+                <form id="filterForm" class="filter-box" role="search">
+
+                    <div class="form-group search-group">
+
+                        <label for="searchInput">
+                            Search internships
+                        </label>
+
+                        <div class="input-wrapper">
+                            <span class="search-icon" aria-hidden="true">🔍</span>
+
+                            <input
+                                type="search"
+                                id="searchInput"
+                                name="search"
+                                placeholder="Search by title, company or skill..."
+                                autocomplete="off"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="domainFilter">
+                            Filter by domain
+                        </label>
+
+                        <select id="domainFilter" name="domain">
+
+                            <option value="all">
+                                All domains
+                            </option>
+
+                            <option value="Technology">
+                                Technology
+                            </option>
+
+                            <option value="Design">
+                                Design
+                            </option>
+
+                            <option value="Marketing">
+                                Marketing
+                            </option>
+
+                            <option value="Finance">
+                                Finance
+                            </option>
+
+                            <option value="Human Resources">
+                                Human Resources
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="clearFilters"
+                        class="secondary-button"
+                    >
+                        Clear
+                    </button>
+
+                </form>
+
+
+                <!-- Status Message -->
+                <div
+                    id="statusMessage"
+                    class="status-message"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- Internship Cards -->
+                <div
+                    id="internshipGrid"
+                    class="internship-grid"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- Empty State -->
+                <div id="emptyState" class="empty-state" hidden>
+
+                    <div class="empty-icon">🔎</div>
+
+                    <h3>No internships found</h3>
+
+                    <p>
+                        Try changing your search or selecting a different domain.
+                    </p>
+
+                    <button
+                        type="button"
+                        id="emptyClearButton"
+                        class="primary-button"
+                    >
+                        Clear Filters
+                    </button>
+
+                </div>
+
+
+                <!-- Error State -->
+                <div id="errorState" class="error-state" hidden>
+
+                    <div class="empty-icon">⚠️</div>
+
+                    <h3>Something went wrong</h3>
+
+                    <p>
+                        We couldn't load the internship listings.
+                        Please try again.
+                    </p>
+
+                    <button
+                        type="button"
+                        id="retryButton"
+                        class="primary-button"
+                    >
+                        Try Again
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+
+            <div class="container about-content">
+
+                <div>
+                    <p class="eyebrow">ABOUT INTERNHUB</p>
+
+                    <h2>
+                        Helping students discover opportunities.
+                    </h2>
+                </div>
+
+                <p>
+                    InternHub is a responsive internship discovery platform
+                    designed to help students explore opportunities, develop
+                    professional skills and take the next step in their careers.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <p>
+                © 2026 InternHub. Built for learning and career development.
+            </p>
+
+            <a href="#hero-title">
+                Back to top
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
